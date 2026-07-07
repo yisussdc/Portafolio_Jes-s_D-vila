@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yisuss — Ingeniería Industrial &amp; Estrategia Digital</title>
+
+  <!-- Tipografías: Space Grotesk (títulos), Inter (cuerpo), JetBrains Mono (datos/métricas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER: contiene el logo/nombre y la navegación.
+       Es fijo (sticky) para que el usuario siempre pueda moverse entre secciones.
+  ============================================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo">YS<span class="logo-dot">.</span></a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón hamburguesa para móvil, controlado por script.js -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================
+         SECCIÓN 1 — INICIO (Landing / Hero)
+         Frase breve de quién eres y qué valor aportas.
+         Fondo tipo "plano técnico" (grid de blueprint) definido en CSS.
+    ============================================= -->
+    <section id="inicio" class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="video-container">
+    <video id="bg-video" autoplay muted loop playsinline>
+      <source src="Joven_ingeniero_trabajando_en_of…_202607061918.mp4" type="video/mp4">
+    </video>
+  </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Ficha técnica — Perfil</p>
+        <h1 class="hero-title">
+          Estudiante de Ingeniería Industrial en formación<br>
+          y estratega digital enfocado en resultados.
+        </h1>
+        <p class="hero-subtitle">
+          Diseño identidad de marca, desarrollo sitios web y construyo estrategias
+          de redes sociales con una mirada de análisis de Datos.
+        </p>
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-ghost">Hablemos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN 2 — PROYECTOS (la más importante)
+         3-4 casos de estudio con formato: Reto / Solución / Resultados / Enlace
+    ============================================= -->
+    <section id="proyectos" class="proyectos">
+      <div class="section-inner">
+        <p class="section-eyebrow">Casos de estudio</p>
+        <h2 class="section-title">Proyectos seleccionados</h2>
+
+        <!-- Filtros por categoría: los botones tienen data-filter, ver script.js -->
+        <div class="filtros" role="group" aria-label="Filtrar proyectos por categoría">
+          <button class="filtro-btn is-active" data-filter="todos">Todos</button>
+          <button class="filtro-btn" data-filter="diseno">Diseño</button>
+          <button class="filtro-btn" data-filter="web">Desarrollo Web</button>
+          <button class="filtro-btn" data-filter="estrategia">Estrategia Digital</button>
+        </div>
+
+        <div class="proyectos-grid">
+
+          <!-- PROYECTO 1 -->
+          <article class="proyecto-card" data-category="diseno">
+            <span class="proyecto-tag">Diseño Gráfico y Desarrollo web</span>
+            <h3>Yisuss Shoes: Branding & Desarrollo Web</h3>
+            <h4><strong>Proyecto Conceptual / Caso de Estudio</strong></h4>
+            <br>
+            <div class="caso-bloque">
+              <h4>El Reto</h4>
+              <p>Construir la identidad visual y la infraestructura digital desde cero para una marca de streetwear urbana que no contaba con ningún logotipo, concepto de marca ni presencia previa.</p>
+            </div>
+            
+            <div class="caso-bloque">
+              <h4>La Solución</h4>
+              <ul>
+                <li><p><span class="metric">Branding: </span>Creación de naming, logotipo y manual de marca con estética industrial y premium.</p></li>
+                <li><p><span class="metric">UI/UX & Web: </span>Prototipado de alta fidelidad en Figma y desarrollo de landing page responsive con código limpio (HTML5, CSS3, JS).</p></li>
+                <li><p><span class="metric">Contenido: </span>Producción audiovisual de campaña (motion concepts) adaptada para Instagram.</p></li>
+              </ul>
+            </div>
+            
+            <div class="caso-bloque">
+              <h4>Los Resultados</h4>
+              <p><span class="metric">Ecosistema Digital listo para Lanzamiento: </span>Identidad corporativa completa y plataforma web 100% funcional y fiel al diseño original y contenido audiovisual para redes listo para el lanzamiento de la marca.</p>
+            </div>
+
+            <a href="YisussShoes-campaña.zip" class="btn btn-small" target="_blank">Descargar Brand Kit →</a>
+            <a href="https://yisussdc.github.io/YisussShoesWebSite/" class="btn btn-small" target="_blank">Ver sitio en vivo →</a>
+          </article>
+
+          <!-- PROYECTO 2 -->
+          <article class="proyecto-card" data-category="web">
+            <span class="proyecto-tag">SEO Copywriting y Diseño Web</span>
+            <h3>K-Beauty (SEO Copywriting + UI Layout)</h3>
+
+            <div class="caso-bloque">
+              <h4>El Reto</h4>
+              <p>Redactar un artículo optimizado para motores de búsqueda sobre cosmética coreana y transformar el texto plano en una experiencia visual atractiva que rompiera la monotonía de un blog común.</p>
+            </div>
+            <div class="caso-bloque">
+              <h4>La Solución</h4>
+              <p>Estructuré el contenido con palabras clave estratégicas y jerarquía limpia, y diseñé desde cero una interfaz web con una paleta de colores suave, bloques alternados y ritmo visual para maximizar la legibilidad.</p>
+            </div>
+            <div class="caso-bloque">
+              <h4>Los Resultados</h4>
+              <p>Un producto digital interactivo y optimizado, listo para la web, que demuestra la capacidad de fusionar marketing de contenidos con maquetación frontend.</p>
+            </div>
+
+            <!-- EDITA AQUÍ: coloca el link del sitio en vivo -->
+            <a href="https://yisussdc.github.io/Articulo-SEO-Cosmeticos-Coreanos/" class="btn btn-small" target="_blank">Ver sitio en vivo →</a>
+          </article>
+
+          <!-- PROYECTO 3 -->
+         <article class="proyecto-card" data-category="estrategia">
+            <span class="proyecto-tag">Estrategia Digital</span>
+            <h3>Reactivación Exprés y Testeo de Nicho en Instagram</h3>
+            <h4><strong>Caso de Estudio y Éxito</strong></h4>
+            <br>
+
+            <div class="caso-bloque">
+              <h4>El Reto</h4>
+              <p>Despertar el algoritmo de distribución orgánica de una cuenta multipotencial en estado crítico de inactividad y validar el nicho ganador en menos de 20 días.</p>
+            </div>
+            
+            <div class="caso-bloque">
+              <h4>La Solución</h4>
+              <ul>
+                <li><p><span class="metric">Estrategia: </span>Despliegue de 7 piezas de contenido en 3 semanas alternando formatos (Reels, Carruseles y Foto).</p></li>
+                <li><p><span class="metric">Optimización: </span>Uso de trending audios estratégicos, hashtags hiperespecíficos y copys interactivos con llamadas a la acción (CTA).</p></li>
+              </ul>
+            </div>
+            
+            <div class="caso-bloque">
+              <h4>Los Resultados</h4>
+              <ul>
+                <li><p><span class="metric">+4.5% </span>de crecimiento neto en la base de seguidores en solo 20 días.</p></li>
+                <li><p><span class="metric">3,622 </span>reproducciones orgánicas totales y 249 interacciones reales.</p></li>
+                <li><p><span class="metric">Nicho Validado: </span>El cruce de métricas confirmó al contenido musical (piano) como el pilar de mayor fidelización para la cuenta.</p></li>
+              </ul>
+            </div>
+
+            <a href="Caso_de_Estudio_Reactivacion_Instagram_presentación.pdf" class="btn btn-small" target="_blank">Ver el caso completo →</a>
+          </article>
+
+        </div>
+        <!-- Mensaje que aparece si un filtro no tiene resultados (ver script.js) -->
+        <p class="sin-resultados" hidden>No hay proyectos en esta categoría todavía.</p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN 3 — SOBRE MÍ
+    ============================================= -->
+    <section id="sobre-mi" class="sobre-mi">
+      <div class="section-inner sobre-mi-grid">
+        <div>
+          <p class="section-eyebrow">Perfil</p>
+          <h2 class="section-title">Sobre mí</h2>
+          <p>
+            Estudiante de Ingeniería Industrial y creador de soluciones digitales. Tengo un perfil híbrido que me permite conectar dos mundos: la estructura lógica de los datos y la creatividad estratégica. En este espacio comparto mis habilidades aplicadas a través de proyectos personales y casos de estudio en diseño de marca, desarrollo web y estrategia en redes sociales, mostrando mi metodología para ayudar a los proyectos a comunicar mejor. Además, con la visión metódica de mi carrera, actualmente me encuentro ampliando mis herramientas en el área analítica mediante el aprendizaje de Excel Avanzado y SQL (PostgreSQL). Mi meta es combinar la lógica, el diseño y la organización para aportar soluciones prácticas y estructuradas a cada proyecto en el que participo.
+          </p>
+          <!-- EDITA AQUÍ: agrega o quita habilidades según tu perfil -->
+          <ul class="skills-list">
+            <li>Diseño de identidad de marca</li>
+            <li>Desarrollo web (HTML, CSS, JS)</li>
+            <li>Estrategia de contenido y RRSS</li>
+            <li>Fundamentos de Analítica: SQL / PostgreSQL y Excel (En desarrollo)</li>
+          </ul>
+        </div>
+        <!-- EDITA AQUÍ: reemplaza con tu foto, súbela a /assets/img/ -->
+        <div class="sobre-mi-visual">
+          <img src="WhatsApp Image 2026-07-06 at 8.17.38 PM.jpeg" alt="Foto de perfil de Jesús, Estudiante de Ingeniería Industrial y Estratega Digital" class="profile-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN 4 — CONTACTO
+    ============================================= -->
+    <section id="contacto" class="contacto">
+      <div class="section-inner">
+        <p class="section-eyebrow">Contacto</p>
+        <h2 class="section-title">Hablemos de tu próximo proyecto</h2>
+          <div class="contacto-links">
+            <!-- EDITA AQUÍ: coloca tus enlaces reales -->
+            <a href="mailto:yisuss101297@gmail.com">yisuss101297@gmail.com</a>
+            <a href="https://t.me/YisussDC" target="_blank">Telegram</a>
+            <a href="https://github.com/yisussdc" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER: información de cierre, no navegación principal
+  ============================================= -->
+  <footer class="site-footer">
+    <p>© <span id="anio"></span> Yisuss. Hecho con HTML, CSS y JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

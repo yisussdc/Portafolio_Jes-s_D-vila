@@ -1,0 +1,522 @@
+/* ============================================================
+   TOKENS DE DISEÑO
+   Cambia estos valores para ajustar todo el look del sitio
+   desde un solo lugar (colores, tipografía, espaciados).
+============================================================ */
+:root {
+  /* Colores — estética "plano técnico" (blueprint) */
+  --color-bg: #10151c;          /* fondo principal, azul-grafito oscuro */
+  --color-bg-alt: #161d27;      /* fondo alterno de secciones */
+  --color-grid-line: #a3b7cf;   /* líneas del grid tipo plano técnico */
+  --color-text: #ebf1f8;        /* texto principal, casi blanco */
+  --color-text-muted: #626976;  /* texto secundario */
+  --color-accent: #e8a33d;      /* ámbar — botones y llamados a la acción */
+  --color-accent-hover: #f4b862;
+  --color-data: #4fd1c5;        /* cian/verde-azulado — métricas y datos */
+  --color-border: #2a3648;
+
+  /* Tipografía */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout */
+  --max-width: 1120px;
+  --radius: 10px;
+}
+
+/* ============================================================
+   RESET BÁSICO
+============================================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Altura total de la ventana */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. Contenedor del video */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3. Contenido sobre el video */
+.hero-content {
+  position: relative;
+  z-index: 1; /* Esto lo coloca encima del video */
+  text-align: center;
+  padding: 3rem;
+}.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Altura total de la ventana */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. Contenedor del video */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3. Contenido sobre el video */
+.hero-content {
+  position: relative;
+  z-index: 1; /* Esto lo coloca encima del video */
+  text-align: center;
+  padding: 2rem;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* Accesibilidad: foco visible para navegación por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Respeta a usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ============================================================
+   UTILIDAD: contenedor centrado
+   -----------------------------------------------------------
+   CÓMO CENTRAR ELEMENTOS EN CSS (la pregunta que hiciste):
+   1) Para centrar un BLOQUE horizontalmente dentro de su padre:
+      usa "margin: 0 auto" + un "max-width" (lo hacemos aquí abajo).
+   2) Para centrar contenido dentro de una caja (horizontal Y vertical):
+      usa "display:flex; align-items:center; justify-content:center"
+      (lo usamos en .hero y en los botones).
+   3) Con CSS Grid, "place-items: center" centra en ambos ejes a la vez.
+============================================================ */
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;      /* <- esto centra el bloque horizontalmente */
+  padding: 100px 24px;
+}
+
+/* ============================================================
+   HEADER / NAVEGACIÓN
+============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(16, 21, 28, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;   /* centra verticalmente logo y nav */
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.logo-dot { color: var(--color-accent); }
+
+.main-nav ul {
+  display: flex;
+  gap: 32px;
+}
+
+.main-nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+.main-nav a:hover { color: var(--color-text); }
+
+.nav-toggle {
+  display: none; /* solo visible en móvil, ver media query abajo */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+}
+
+/* ============================================================
+   HERO / INICIO
+============================================================ */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;   /* centra verticalmente el contenido */
+  overflow: hidden;
+}
+
+/* Signature element: fondo de grid tipo "plano técnico" */
+
+.hero-content {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;       /* centra el bloque de texto horizontalmente */
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  color: var(--color-data);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   BOTONES
+============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* centra el texto del botón en ambos ejes */
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #10151c;
+}
+.btn-primary:hover { background: var(--color-accent-hover); }
+
+.btn-ghost {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+.btn-ghost:hover { border-color: var(--color-accent); }
+
+.btn-small {
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  background: transparent;
+  border: 1px solid var(--color-data);
+  color: var(--color-data);
+  margin-top: 20px;
+}
+.btn-small:hover { background: var(--color-data); color: #10151c; }
+
+/* ============================================================
+   ENCABEZADOS DE SECCIÓN (reutilizado en Proyectos / Sobre mí / Contacto)
+============================================================ */
+.section-eyebrow {
+  font-family: var(--font-mono);
+  color: var(--color-data);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* ============================================================
+   PROYECTOS — CSS GRID
+   -----------------------------------------------------------
+   Grid con columnas flexibles: en pantallas grandes muestra
+   2 columnas; "auto-fit" + "minmax" hace que se ajuste solo
+   y pase a 1 columna en pantallas pequeñas sin media queries extra.
+============================================================ */
+.proyectos { background: var(--color-bg-alt); }
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filtro-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filtro-btn:hover { border-color: var(--color-accent); color: var(--color-text); }
+.filtro-btn.is-active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #10151c;
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.proyecto-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.proyecto-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 14px 0 20px;
+}
+
+.proyecto-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-data);
+  border: 1px solid var(--color-data);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.caso-bloque { margin-bottom: 16px; }
+.caso-bloque h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+.caso-bloque p { font-size: 0.95rem; }
+
+.metric {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* Estado usado por script.js para ocultar tarjetas al filtrar */
+.proyecto-card.is-hidden {
+  display: none;
+}
+
+.sin-resultados {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  margin-top: 20px;
+}
+
+/* ============================================================
+   SOBRE MÍ
+============================================================ */
+.sobre-mi-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center; /* centra verticalmente ambas columnas entre sí */
+}
+
+.sobre-mi p { color: var(--color-text-muted); margin-bottom: 24px; }
+
+.skills-list {
+  display: grid;
+  gap: 10px;
+}
+.skills-list li {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding-left: 20px;
+  position: relative;
+}
+.skills-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* Placeholder para tu foto — reemplaza con background-image o un <img> real */
+.sobre-mi-visual {
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--color-grid-line), var(--color-bg-alt));
+  border: 1px solid var(--color-border);
+}
+
+/* ============================================================
+   CONTACTO
+============================================================ */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+}
+
+.contacto-form {
+  display: grid;
+  gap: 8px;
+}
+.contacto-form label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 12px;
+}
+.contacto-form input,
+.contacto-form textarea {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+.contacto-form button { margin-top: 20px; justify-self: start; }
+
+.contacto-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-self: start;
+}
+.contacto-links a {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+.contacto-links a:hover { color: var(--color-data); }
+
+/* ============================================================
+   FOOTER
+============================================================ */
+.site-footer {
+  text-align: center;   /* centra el texto de forma simple */
+  padding: 32px 24px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* ============================================================
+   RESPONSIVE — MÓVIL
+   -----------------------------------------------------------
+   Regla general: diseñamos primero para escritorio y aquí
+   "apilamos" las columnas para pantallas angostas.
+   Breakpoint en 768px cubre la mayoría de tablets/celulares.
+============================================================ */
+@media (max-width: 768px) {
+  .main-nav { display: none; }          /* se oculta el menú horizontal */
+  .nav-toggle { display: flex; }        /* aparece el botón hamburguesa */
+
+  /* Cuando el JS agregue la clase .is-open, el menú se muestra en columna */
+  .main-nav.is-open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 20px 24px;
+  }
+  .main-nav.is-open ul {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .section-inner { padding: 64px 20px; }
+
+  .sobre-mi-grid,
+  .contacto-grid {
+    grid-template-columns: 1fr;  /* una sola columna en móvil */
+  }
+
+  .sobre-mi-visual { order: -1; max-width: 240px; margin: 0 auto 24px; }
+}
