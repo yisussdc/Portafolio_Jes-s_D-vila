@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <!-- ============================================
+   <!-- ============================================
        HEADER: contiene el logo/nombre y la navegación.
        Es fijo (sticky) para que el usuario siempre pueda moverse entre secciones.
   ============================================= -->
@@ -56,11 +56,11 @@
         <p class="hero-eyebrow">Ficha técnica — Perfil</p>
         <h1 class="hero-title">
           Asistencia Digital Estratégica<br>
-          En Marketing y Diseño
+          En Marketing, Edición Audiovisual y Diseño
         </h1>
         <p class="hero-subtitle">
-          Diseño identidad de marca, desarrollo sitios web y construyo estrategias
-          de redes sociales con una mirada de análisis de Datos.
+          Diseño identidad de marca, desarrollo sitios web, Edito contenido Audiovisual y construyo estrategias
+          de redes sociales.
         </p>
         <div class="hero-actions">
           <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
@@ -69,14 +69,26 @@
       </div>
     </section>
 
-    <!-- ============================================
-         SECCIÓN 2 — PROYECTOS (la más importante)
-         3-4 casos de estudio con formato: Reto / Solución / Resultados / Enlace
-    ============================================= -->
+    <!-- ============================================================
+         SECCIÓN 2 — PROYECTOS & SHOWCASE INTEGRADO
+         ============================================================
+         GUÍA RÁPIDA DE EDICIÓN MANUAL:
+         1. CÓMO EDITAR TEXTOS DE UN CASO:
+            - Modifica los títulos en <h3>, subtítulos en <h4> y descripciones en los <div class="caso-bloque">.
+         2. CÓMO CAMBIAR O AGREGAR ENLACES:
+            - En <div class="proyecto-acciones">, ajusta los enlaces href="tu-archivo.zip" o href="https://tu-sitio.com".
+         3. CÓMO CAMBIAR IMÁGENES O VIDEOS:
+            - Dentro de <div class="proyecto-media-grid">, cada tarjeta es un <div class="media-thumb">.
+            - Para imagen: cambia el src="nombre_imagen.jpg" y el alt="Descripción".
+            - Para video: cambia el <source src="nombre_video.mp4" type="video/mp4">.
+            - Los títulos y subtítulos del lightbox se editan en <div class="media-meta">.
+         4. CÓMO AÑADIR UN NUEVO PROYECTO:
+            - Duplica un bloque completo de <article class="proyecto-fila" data-category="..."> y actualiza sus datos.
+    ============================================================ -->
     <section id="proyectos" class="proyectos">
       <div class="section-inner">
-        <p class="section-eyebrow">Casos de estudio</p>
-        <h2 class="section-title">Proyectos seleccionados</h2>
+        <p class="section-eyebrow">Casos de estudio &amp; Showcase Creativo</p>
+        <h2 class="section-title">Proyectos Seleccionados</h2>
 
         <!-- Filtros por categoría: los botones tienen data-filter, ver script.js -->
         <div class="filtros" role="group" aria-label="Filtrar proyectos por categoría">
@@ -86,301 +98,520 @@
           <button class="filtro-btn" data-filter="estrategia">Estrategia Digital</button>
         </div>
 
-        <div class="proyectos-grid">
+        <div class="proyectos-lista">
 
-          <!-- PROYECTO 1 -->
-          <article class="proyecto-card" data-category="diseno">
-            <span class="proyecto-tag">Diseño Gráfico y Desarrollo web</span>
-            <h3>Yisuss Shoes: Branding & Desarrollo Web</h3>
-            <h4><strong>Proyecto Conceptual / Caso de Estudio</strong></h4>
-            <br>
-            <div class="caso-bloque">
-              <h4>El Reto</h4>
-              <p>Construir la identidad visual y la infraestructura digital desde cero para una marca de streetwear urbana que no contaba con ningún logotipo, concepto de marca ni presencia previa.</p>
-            </div>
+           <!-- ============================================================
+               PROYECTO 1: MODERN LUX ONE (Brand Identity, Web & Marketing)
+          ============================================================ -->
+          <article class="proyecto-fila" data-category="diseno web estrategia">
             
-            <div class="caso-bloque">
-              <h4>La Solución</h4>
-              <ul>
-                <li><p><span class="metric">Branding: </span>Creación de naming, logotipo y manual de marca con estética industrial y premium.</p></li>
-                <li><p><span class="metric">UI/UX & Web: </span>Prototipado de alta fidelidad en Figma y desarrollo de landing page responsive con código limpio (HTML5, CSS3, JS).</p></li>
-                <li><p><span class="metric">Contenido: </span>Producción audiovisual de campaña (motion concepts) adaptada para Instagram.</p></li>
-              </ul>
-            </div>
-            
-            <div class="caso-bloque">
-              <h4>Los Resultados</h4>
-              <p><span class="metric">Ecosistema Digital listo para Lanzamiento: </span>Identidad corporativa completa y plataforma web 100% funcional y fiel al diseño original y contenido audiovisual para redes listo para el lanzamiento de la marca.</p>
+            <!-- LATERAL IZQUIERDO: Descripción del caso y botón -->
+            <div class="proyecto-info animate-left">
+              <div class="proyecto-header">
+                <span class="proyecto-tag">Branding, Web, Automatizaciones &amp; Marketing Digital</span>
+                <h3 class="proyecto-nombre">Modern Lux One: Brand Identity, Digital Ecosystem &amp; Marketing</h3>
+                <h4 class="proyecto-subtitulo">Ecosistema Integral de Marca &amp; Presencia Digital</h4>
+              </div>
+
+              <div class="caso-bloque">
+                <h4>El Reto</h4>
+                <!-- EDITA AQUÍ: Describe el reto u objetivo de tu trabajo -->
+                <p>Construir desde cero una marca sofisticada y sólida en el mercado de acabados, arquitectura y remodelación de lujo: una identidad visual minimalista de alto estándar, una infraestructura digital profesional y una estrategia de contenidos y publicidad capaz de convertir audiencia en clientes potenciales.</p>
+              </div>
+              
+              <div class="caso-bloque">
+                <h4>La Solución</h4>
+                <!-- EDITA AQUÍ: Agrega o modifica los puntos de tu solución -->
+                <ul>
+                  <li><p><span class="metric">Identidad Visual &amp; Branding: </span>Diseño de logotipo, isotipo geométrico premium, manual cromático y estética corporativa sobria y exclusiva.</p></li>
+                  <li><p><span class="metric">Estrategia de Contenidos: </span>Diseño de carruseles educativos y persuasivos (de 7 y 8 láminas) junto a reels audiovisuales de alto dinamismo enfocados en retención y conversión.</p></li>
+                  <li><p><span class="metric">Ecosistema Web &amp; Presencia Digital: </span>Configuración de dominio web y correo corporativo, y maquetación de sitio y banners optimizados para transformar visitas en leads.</p></li>
+                </ul>
+              </div>
+              
+              <div class="caso-bloque">
+                <h4>Los Resultados</h4>
+                <!-- EDITA AQUÍ: Añade tus resultados o métricas clave -->
+                <ul>
+                  <li><p><span class="metric">Ecosistema Completo: </span>Identidad de marca uniforme y atractiva en todos los puntos de contacto digitales.</p></li>
+                  <li><p><span class="metric">Presencia profesional: </span>Dominio y correo corporativo que refuerzan la credibilidad de la marca desde el primer contacto.</p></li>
+                   <li><p><span class="metric">Malla de contenido validada: </span>Carruseles estructurados para guardados y compartidos, y reels con ritmo diseñado para pauta.</p></li>
+                   <li><p><span class="metric">Operación más eficiente: </span>Procesos automatizados que ahorran tiempo y mejoran la gestión de leads.</p></li>
+                </ul>
+              </div>
+
+              <div class="proyecto-acciones">
+                <!-- EDITA AQUÍ: Reemplaza '#' por el enlace real a tu sitio web cuando lo desees -->
+                <a href="https://modernluxone.com/" class="btn btn-small btn-accent" target="_blank">Ver sitio web en vivo →</a>
+              </div>
             </div>
 
-            <a href="YisussShoes-campaña.zip" class="btn btn-small" target="_blank">Descargar Brand Kit →</a>
-            <a href="https://yisussdc.github.io/YisussShoesWebSite/" class="btn btn-small" target="_blank">Ver sitio en vivo →</a>
+            <!-- LATERAL DERECHO: Showcase Creativo con Álbumes Deslizables -->
+            <div class="proyecto-showcase animate-right">
+              <div class="showcase-top-bar">
+                <span class="showcase-etiqueta">Showcase Creativo &amp; Álbumes</span>
+                <span class="showcase-hint">Desliza o haz click para expandir 🔍</span>
+              </div>
+
+              <div class="proyecto-media-grid media-grid-modern-lux">
+
+                <!-- 1. Álbum Carrusel 1 (1.1 al 1.7) -->
+                <div class="media-thumb media-album" data-type="album" data-album-title="Carrusel 01 — Estrategia de Marca">
+                  <div class="media-wrapper">
+                    <img src="Modern lux one carrucel 1.1.jpg" alt="Carrusel 1 Modern Lux One" class="album-current-media" loading="lazy">
+                    <span class="media-tag tag-album">📚 Carrusel (7 láminas)</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">🔍</span>
+                      <span class="overlay-text">Abrir álbum completo</span>
+                    </div>
+                    <!-- Controles para deslizar en miniatura -->
+                    <div class="thumb-slider-controls">
+                      <button class="thumb-btn thumb-prev" aria-label="Anterior">‹</button>
+                      <span class="thumb-counter">1 / 7</span>
+                      <button class="thumb-btn thumb-next" aria-label="Siguiente">›</button>
+                    </div>
+                  </div>
+
+                  <!-- Láminas del carrusel para el visor interactivo -->
+                  <div class="album-slides" hidden>
+                    <span data-src="Modern lux one carrucel 1.1.jpg" data-type="image" data-caption="Lámina 1.1 — Portada y concepto de marca"></span>
+                    <span data-src="Modern lux one carrucel 1.2.jpg" data-type="image" data-caption="Lámina 1.2 — Propuesta de valor"></span>
+                    <span data-src="Modern lux one carrucel 1.3.jpg" data-type="image" data-caption="Lámina 1.3 — Soluciones y pilares clave"></span>
+                    <span data-src="Modern lux one carrucel 1.4.jpg" data-type="image" data-caption="Lámina 1.4 — Caso de aplicación y estilo"></span>
+                    <span data-src="Modern lux one carrucel 1.5.jpg" data-type="image" data-caption="Lámina 1.5 — Beneficios y acabados"></span>
+                    <span data-src="Modern lux one carrucel 1.6.jpg" data-type="image" data-caption="Lámina 1.6 — Resumen de estrategia"></span>
+                    <span data-src="Modern lux one carrucel 1.7.jpg" data-type="image" data-caption="Lámina 1.7 — Llamado a la acción (CTA)"></span>
+                  </div>
+
+                  <div class="media-meta">
+                    <h4>Carrusel 01 — Estrategia de Marca</h4>
+                    <p>Secuencia de 7 láminas. Desliza con las flechas o abre en pantalla completa.</p>
+                  </div>
+                </div>
+
+                <!-- 2. Álbum Carrusel 2 (2.1 al 2.8) -->
+                <div class="media-thumb media-album" data-type="album" data-album-title="Carrusel 02 — Proceso &amp; Acabados">
+                  <div class="media-wrapper">
+                    <img src="Modern lux one carrucel 2.1.jpg" alt="Carrusel 2 Modern Lux One" class="album-current-media" loading="lazy">
+                    <span class="media-tag tag-album">📚 Carrusel (8 láminas)</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">🔍</span>
+                      <span class="overlay-text">Abrir álbum completo</span>
+                    </div>
+                    <div class="thumb-slider-controls">
+                      <button class="thumb-btn thumb-prev" aria-label="Anterior">‹</button>
+                      <span class="thumb-counter">1 / 8</span>
+                      <button class="thumb-btn thumb-next" aria-label="Siguiente">›</button>
+                    </div>
+                  </div>
+
+                  <!-- Láminas del carrusel 2 -->
+                  <div class="album-slides" hidden>
+                    <span data-src="Modern lux one carrucel 2.1.jpg" data-type="image" data-caption="Lámina 2.1 — Portada y gancho visual"></span>
+                    <span data-src="Modern lux one carrucel 2.2.jpg" data-type="image" data-caption="Lámina 2.2 — Contexto y desafío"></span>
+                    <span data-src="Modern lux one carrucel 2.3.jpg" data-type="image" data-caption="Lámina 2.3 — Metodología de remodelación"></span>
+                    <span data-src="Modern lux one carrucel 2.4.jpg" data-type="image" data-caption="Lámina 2.4 — Transformación y proceso"></span>
+                    <span data-src="Modern lux one carrucel 2.5.jpg" data-type="image" data-caption="Lámina 2.5 — Selección de materiales"></span>
+                    <span data-src="Modern lux one carrucel 2.6.jpg" data-type="image" data-caption="Lámina 2.6 — Calidad y durabilidad"></span>
+                    <span data-src="Modern lux one carrucel 2.7.jpg" data-type="image" data-caption="Lámina 2.7 — Garantía y valor"></span>
+                    <span data-src="Modern lux one carrucel 2.8.jpg" data-type="image" data-caption="Lámina 2.8 — CTA y contacto directo"></span>
+                  </div>
+
+                  <div class="media-meta">
+                    <h4>Carrusel 02 — Proceso &amp; Acabados</h4>
+                    <p>Secuencia de 8 láminas de alto valor. Desliza o amplía para leer completo.</p>
+                  </div>
+                </div>
+
+                <!-- 3. Álbum Logotipos (2 versiones) -->
+                <div class="media-thumb media-album" data-type="album" data-album-title="Logotipos &amp; Variaciones de Marca">
+                  <div class="media-wrapper">
+                    <img src="Modern Lux one Logotipo.png" alt="Logotipo Modern Lux One" class="album-current-media" loading="lazy">
+                    <span class="media-tag">🎨 Logotipos (2 piezas)</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">🔍</span>
+                      <span class="overlay-text">Ver logotipos</span>
+                    </div>
+                    <div class="thumb-slider-controls">
+                      <button class="thumb-btn thumb-prev" aria-label="Anterior">‹</button>
+                      <span class="thumb-counter">1 / 2</span>
+                      <button class="thumb-btn thumb-next" aria-label="Siguiente">›</button>
+                    </div>
+                  </div>
+
+                  <div class="album-slides" hidden>
+                    <span data-src="Modern Lux one Logotipo.png" data-type="image" data-caption="Logotipo Versión 01 — Isotipo &amp; Composición Principal"></span>
+                    <span data-src="Modern Lux One Logotipo 2.png" data-type="image" data-caption="Logotipo Versión 02 — Adaptación Cromática"></span>
+                  </div>
+
+                  <div class="media-meta">
+                    <h4>Identidad Visual &amp; Logotipos</h4>
+                    <p>Diseño de isotipo y logotipo con estética geométrica premium.</p>
+                  </div>
+                </div>
+
+                <!-- 4. Álbum Reels Audiovisuales (3 videos) -->
+                <div class="media-thumb media-album" data-type="album" data-album-title="Reels Audiovisuales: Modern Lux One">
+                  <div class="media-wrapper">
+                    <video autoplay loop muted playsinline class="album-current-media" poster="Modern Lux one Logotipo.png">
+                      <source src="Modern lux one reel 1.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-tag tag-video">▶ Reels (3 videos)</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">▶</span>
+                      <span class="overlay-text">Reproducir con audio</span>
+                    </div>
+                    <div class="thumb-slider-controls">
+                      <button class="thumb-btn thumb-prev" aria-label="Anterior">‹</button>
+                      <span class="thumb-counter">1 / 3</span>
+                      <button class="thumb-btn thumb-next" aria-label="Siguiente">›</button>
+                    </div>
+                  </div>
+
+                  <div class="album-slides" hidden>
+                    <span data-src="Modern lux one reel 1.mp4" data-type="video" data-caption="Reel 01 — Concepto y Dinámica Visual"></span>
+                    <span data-src="Modern lux one reel 2.mp4" data-type="video" data-caption="Reel 02 — Transformación y Acabados"></span>
+                    <span data-src="Modern lux one reel 3.mp4" data-type="video" data-caption="Reel 03 — Cierre de Impacto y Llamada a la Acción"></span>
+                  </div>
+
+                  <div class="media-meta">
+                    <h4>Reels Audiovisuales</h4>
+                    <p>Colección de 3 reels conceptuales. Desliza para cambiar de video.</p>
+                  </div>
+                </div>
+
+                <!-- 5. Banner Promocional (Ocupa el ancho completo de la grilla) -->
+                <div class="media-thumb media-thumb-banner" data-type="image">
+                  <div class="media-wrapper">
+                    <img src="Banner .jpg" alt="Banner Promocional Modern Lux One" loading="lazy">
+                    <span class="media-tag">🖼️ Banner Promocional</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">🔍</span>
+                      <span class="overlay-text">Ver banner completo</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>Banner Digital de Gran Formato</h4>
+                    <p>Pieza publicitaria de alto impacto para encabezado web y pauta publicitaria.</p>
+                  </div>
+                </div>
+
+              </div><!-- /.proyecto-media-grid -->
+            </div><!-- /.proyecto-showcase -->
+
+          </article>
+          
+          <!-- ============================================================
+               PROYECTO 1: YISUSS SHOES (Branding, Web & Audiovisual)
+          ============================================================ -->
+          <article class="proyecto-fila" data-category="diseno web">
+            
+            <!-- LATERAL IZQUIERDO: Descripción del caso y botones (animación lateral izquierda) -->
+            <div class="proyecto-info animate-left">
+              <div class="proyecto-header">
+                <span class="proyecto-tag">Diseño Gráfico &amp; Desarrollo Web</span>
+                <h3 class="proyecto-nombre">Yisuss Shoes: Branding &amp; Desarrollo Web</h3>
+                <h4 class="proyecto-subtitulo">Proyecto Conceptual / Caso de Estudio</h4>
+              </div>
+
+              <div class="caso-bloque">
+                <h4>El Reto</h4>
+                <p>Construir la identidad visual y la infraestructura digital desde cero para una marca de streetwear urbana que no contaba con ningún logotipo, concepto de marca ni presencia previa.</p>
+              </div>
+              
+              <div class="caso-bloque">
+                <h4>La Solución</h4>
+                <ul>
+                  <li><p><span class="metric">Branding: </span>Creación de naming, logotipo y manual de marca con estética industrial y premium.</p></li>
+                  <li><p><span class="metric">UI/UX &amp; Web: </span>Prototipado de alta fidelidad en Figma y desarrollo de landing page responsive con código limpio (HTML5, CSS3, JS).</p></li>
+                  <li><p><span class="metric">Contenido: </span>Producción audiovisual de campaña (motion concepts) adaptada para Instagram.</p></li>
+                </ul>
+              </div>
+              
+              <div class="caso-bloque">
+                <h4>Los Resultados</h4>
+                <p><span class="metric">Ecosistema Digital listo para Lanzamiento: </span>Identidad corporativa completa y plataforma web 100% funcional y fiel al diseño original, con contenido audiovisual optimizado para redes sociales.</p>
+              </div>
+
+              <div class="proyecto-acciones">
+                <a href="YisussShoes-campaña.zip" class="btn btn-small" target="_blank">Descargar Brand Kit →</a>
+                <a href="https://yisussdc.github.io/YisussShoesWebSite/" class="btn btn-small btn-accent" target="_blank">Ver sitio en vivo →</a>
+              </div>
+            </div>
+
+            <!-- LATERAL DERECHO: Showcase Creativo de Yisuss Shoes (animación lateral derecha) -->
+            <div class="proyecto-showcase animate-right">
+              <div class="showcase-top-bar">
+                <span class="showcase-etiqueta">Showcase Audiovisual &amp; Marca</span>
+                <span class="showcase-hint">Click para expandir 🔍</span>
+              </div>
+
+              <div class="proyecto-media-grid">
+
+                <!-- 1. Logo / Identidad -->
+                <div class="media-thumb" data-type="image">
+                  <div class="media-wrapper">
+                    <img src="logo yisuss shoes remasterizado.jpeg" alt="YisussShoes Brand Board" loading="lazy">
+                    <span class="media-tag">Logo / Identidad Visual</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">🔍</span>
+                      <span class="overlay-text">Ver en grande</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>YisussShoes — Brand Board</h4>
+                    <p>Diseño de logotipo, tipografías y estética urbana industrial.</p>
+                  </div>
+                </div>
+                <!-- 2. Social Media / Carrusel -->
+                <div class="media-thumb" data-type="image">
+                  <div class="media-wrapper">
+                    <img src="yisuss_shoes_detail_texture_01.jpeg" alt="Carrusel de Producto Yisuss Shoes" loading="lazy">
+                    <span class="media-tag">Social Media</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">🔍</span>
+                      <span class="overlay-text">Ver en grande</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>Carrusel Informativo / Feed</h4>
+                    <p>Estructura de grilla y mockup de producto para Instagram.</p>
+                  </div>
+                </div>
+
+                <!-- 3. Reel Conceptual 1 -->
+                <div class="media-thumb" data-type="video">
+                  <div class="media-wrapper">
+                    <video autoplay loop muted playsinline poster="logo yisuss shoes remasterizado.jpeg">
+                      <source src="yisuss_shoes_fitness_concept_04.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-tag tag-video">▶ Reel Conceptual</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">▶</span>
+                      <span class="overlay-text">Reproducir con audio</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>Motion Concept: Dinámica Urbana</h4>
+                    <p>Cápsula audiovisual de alto impacto y ritmo para reels.</p>
+                  </div>
+                </div>
+                  <!-- 4. Reel Conceptual 2 -->
+                <div class="media-thumb" data-type="video">
+                  <div class="media-wrapper">
+                    <video autoplay loop muted playsinline poster="logo yisuss shoes remasterizado.jpeg">
+                      <source src="yisuss_shoes_fit_test_02.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-tag tag-video">▶ Reel Conceptual</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">▶</span>
+                      <span class="overlay-text">Reproducir con audio</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>Motion Concept: Fit &amp; Style</h4>
+                    <p>Testing de formato vertical enfocado en retención de usuarios.</p>
+                  </div>
+                </div>
+
+              </div><!-- /.proyecto-media-grid -->
+            </div><!-- /.proyecto-showcase -->
+
+          </article>
+          <!-- ============================================================
+               PROYECTO 2: K-BEAUTY (SEO Copywriting & UI Layout)
+          ============================================================ -->
+          <article class="proyecto-fila" data-category="web">
+            
+            <!-- LATERAL IZQUIERDO -->
+            <div class="proyecto-info animate-left">
+              <div class="proyecto-header">
+                <span class="proyecto-tag">SEO Copywriting &amp; Diseño Web</span>
+                <h3 class="proyecto-nombre">K-Beauty (SEO Copywriting + UI Layout)</h3>
+                <h4 class="proyecto-subtitulo">Frontend &amp; Redacción Estratégica</h4>
+              </div>
+
+              <div class="caso-bloque">
+                <h4>El Reto</h4>
+                <p>Redactar un artículo optimizado para motores de búsqueda sobre cosmética coreana y transformar el texto plano en una experiencia visual atractiva que rompiera la monotonía de un blog común.</p>
+              </div>
+
+              <div class="caso-bloque">
+                <h4>La Solución</h4>
+                <p>Estructuré el contenido con palabras clave estratégicas y jerarquía limpia, y diseñé desde cero una interfaz web con una paleta de colores suave, bloques alternados y ritmo visual para maximizar la legibilidad.</p>
+              </div>
+
+              <div class="caso-bloque">
+                <h4>Los Resultados</h4>
+                <p><span class="metric">Conversión y Lectura Fluida: </span>Un producto digital interactivo y optimizado, listo para la web, que demuestra la capacidad de fusionar marketing de contenidos con maquetación frontend moderna.</p>
+              </div>
+
+              <div class="proyecto-acciones">
+                <a href="https://yisussdc.github.io/Articulo-SEO-Cosmeticos-Coreanos/" class="btn btn-small btn-accent" target="_blank">Ver sitio en vivo →</a>
+              </div>
+            </div>
+
+            <!-- LATERAL DERECHO: Showcase Creativo de K-Beauty -->
+            <div class="proyecto-showcase animate-right">
+              <div class="showcase-top-bar">
+                <span class="showcase-etiqueta">Maquetación Frontend &amp; Assets</span>
+                <span class="showcase-hint">Click para expandir 🔍</span>
+              </div>
+
+              <div class="proyecto-media-grid">
+
+                <!-- 1. Layout UI Frontend -->
+                <div class="media-thumb media-thumb-banner" data-type="image">
+                  <div class="media-wrapper">
+                    <video autoplay loop muted playsinline poster="Main Logo.png">
+                      <source src="Cosméticos Corenos.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-tag">UI Layout / Frontend</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">🔍</span>
+                      <span class="overlay-text">Ver en grande</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>Maquetación Web &amp; Ritmo Visual</h4>
+                    <p>Diseño de interfaz frontend enfocado en legibilidad, bloques alternados y estética suave.</p>
+                  </div>
+                </div>
+
+              </div><!-- /.proyecto-media-grid -->
+            </div><!-- /.proyecto-showcase -->
+
           </article>
 
-          <!-- PROYECTO 2 -->
-          <article class="proyecto-card" data-category="web">
-            <span class="proyecto-tag">SEO Copywriting y Diseño Web</span>
-            <h3>K-Beauty (SEO Copywriting + UI Layout)</h3>
-
-            <div class="caso-bloque">
-              <h4>El Reto</h4>
-              <p>Redactar un artículo optimizado para motores de búsqueda sobre cosmética coreana y transformar el texto plano en una experiencia visual atractiva que rompiera la monotonía de un blog común.</p>
-            </div>
-            <div class="caso-bloque">
-              <h4>La Solución</h4>
-              <p>Estructuré el contenido con palabras clave estratégicas y jerarquía limpia, y diseñé desde cero una interfaz web con una paleta de colores suave, bloques alternados y ritmo visual para maximizar la legibilidad.</p>
-            </div>
-            <div class="caso-bloque">
-              <h4>Los Resultados</h4>
-              <p>Un producto digital interactivo y optimizado, listo para la web, que demuestra la capacidad de fusionar marketing de contenidos con maquetación frontend.</p>
-            </div>
-
-            <!-- EDITA AQUÍ: coloca el link del sitio en vivo -->
-            <a href="https://yisussdc.github.io/Articulo-SEO-Cosmeticos-Coreanos/" class="btn btn-small" target="_blank">Ver sitio en vivo →</a>
-          </article>
-
-          <!-- PROYECTO 3 -->
-          <article class="proyecto-card" data-category="diseno">
-            <span class="proyecto-tag">Branding y Contenido Digital</span>
-            <h3>Aura Fitness: Creación e Identidad Visual</h3>
-             <h4><strong>Proyecto Conceptual / Caso de Estudio</strong></h4>
-            <br>
-            <div class="caso-bloque">
-              <h4>El Reto</h4>
-              <p>Crear una marca memorable y diferenciada en el saturado nicho del wellness, y estructurar un flujo de trabajo eficiente para prototipar contenido audiovisual atractivo y de alta calidad en poco tiempo.</p>
-            </div>
-
-            <div>
-            <ul>
-                <li><p><span class="metric">Identidad Visual & Branding: </span>Diseñé el logo y seleccioné una paleta de colores equilibrada que transmite energía y recuperación..</p></li>
-                <li><p><span class="metric">Estructura de Contenido Multiformato: </span>Conceptualicé carruseles educativos enfocados en valor directo sobre fitness, nutrición y descanso.</p></li>
-                <li><p><span class="metric">Producción Audiovisual con IA: </span>Creé Reels conceptuales utilizando Inteligencia Artificial para validar dinámicas de retención y estética visual.</p></li>
-              </ul>
-            </div>
-            <br>
-            <div class="caso-bloque">
-              <h4>Los Resultados</h4>
-              <ul>
-                <li><p><span class="metric">Kit de Marca Completo: </span>Identidad gráfica terminada (logo, paleta y tipografías).</p></li>
-                <li><p><span class="metric">Malla de Contenido Validada: </span>Prototipo de feed listo para publicación con carruseles y Reels.</p></li>
-                <li><p><span class="metric">Flujo de Producción Eficiente: </span>Metodología ágil para generar contenido audiovisual de alto impacto en tiempo récord.</p></li>
-              </ul>
-            </div>
-
-            <!-- EDITA AQUÍ: coloca el link del sitio en vivo -->
-            <a href="Portfolio_Project2_AuraFitness.zip" class="btn btn-small" target="_blank">Descargar Brand Kit →</a>
-          </article>
-
-          <!-- PROYECTO 4 -->
-         <article class="proyecto-card" data-category="estrategia">
-            <span class="proyecto-tag">Estrategia de Marketing</span>
-            <h3>Reactivación Exprés y Testeo de Nicho en Instagram</h3>
-            <h4><strong>Caso de Estudio y Éxito</strong></h4>
-            <br>
-
-            <div class="caso-bloque">
-              <h4>El Reto</h4>
-              <p>Despertar el algoritmo de distribución orgánica de una cuenta multipotencial en estado crítico de inactividad y validar el nicho ganador en menos de 20 días.</p>
-            </div>
+          <!-- ============================================================
+               PROYECTO 3: AURA FITNESS (Branding & Audiovisual)
+          ============================================================ -->
+          <article class="proyecto-fila" data-category="diseno">
             
-            <div class="caso-bloque">
-              <h4>La Solución</h4>
-              <ul>
-                <li><p><span class="metric">Estrategia: </span>Despliegue de 7 piezas de contenido en 3 semanas alternando formatos (Reels, Carruseles y Foto).</p></li>
-                <li><p><span class="metric">Optimización: </span>Uso de trending audios estratégicos, hashtags hiperespecíficos y copys interactivos con llamadas a la acción (CTA).</p></li>
-              </ul>
-            </div>
-            
-            <div class="caso-bloque">
-              <h4>Los Resultados</h4>
-              <ul>
-                <li><p><span class="metric">+4.5% </span>de crecimiento neto en la base de seguidores en solo 20 días.</p></li>
-                <li><p><span class="metric">3,622 </span>reproducciones orgánicas totales y 249 interacciones reales.</p></li>
-                <li><p><span class="metric">Nicho Validado: </span>El cruce de métricas confirmó al contenido musical (piano) como el pilar de mayor fidelización para la cuenta.</p></li>
-              </ul>
+            <!-- LATERAL IZQUIERDO -->
+            <div class="proyecto-info animate-left">
+              <div class="proyecto-header">
+                <span class="proyecto-tag">Branding &amp; Contenido Digital</span>
+                <h3 class="proyecto-nombre">Aura Fitness: Creación e Identidad Visual</h3>
+                <h4 class="proyecto-subtitulo">Proyecto Conceptual / Caso de Estudio</h4>
+              </div>
+
+              <div class="caso-bloque">
+                <h4>El Reto</h4>
+                <p>Crear una marca memorable y diferenciada en el saturado nicho del wellness, y estructurar un flujo de trabajo eficiente para prototipar contenido audiovisual atractivo y de alta calidad en poco tiempo.</p>
+              </div>
+
+              <div class="caso-bloque">
+                <h4>La Solución</h4>
+                <ul>
+                  <li><p><span class="metric">Identidad Visual &amp; Branding: </span>Diseño de logo y paleta equilibrada que transmite energía, vitalidad y recuperación.</p></li>
+                  <li><p><span class="metric">Estructura Multiformato: </span>Carruseles educativos enfocados en valor directo sobre fitness, nutrición y descanso.</p></li>
+                  <li><p><span class="metric">Producción Audiovisual con IA: </span>Reels conceptuales mediante IA para validar dinámicas de retención y estética visual.</p></li>
+                </ul>
+              </div>
+
+              <div class="caso-bloque">
+                <h4>Los Resultados</h4>
+                <ul>
+                  <li><p><span class="metric">Kit de Marca Completo: </span>Identidad gráfica terminada (logo, paleta y tipografías).</p></li>
+                  <li><p><span class="metric">Malla de Contenido Validada: </span>Prototipo de feed listo para publicación con carruseles y Reels.</p></li>
+                  <li><p><span class="metric">Flujo Ágil: </span>Metodología rápida para generar contenido audiovisual de alto impacto.</p></li>
+                </ul>
+              </div>
+
+              <div class="proyecto-acciones">
+                <a href="Portfolio_Project2_AuraFitness.zip" class="btn btn-small" target="_blank">Descargar Brand Kit →</a>
+              </div>
             </div>
 
-            <a href="Caso_de_Estudio_Reactivacion_Instagram_presentación.pdf" class="btn btn-small" target="_blank">Ver el caso completo →</a>
+            <!-- LATERAL DERECHO: Showcase Creativo de Aura Fitness -->
+            <div class="proyecto-showcase animate-right">
+              <div class="showcase-top-bar">
+                <span class="showcase-etiqueta">Showcase Creativo &amp; Reels</span>
+                <span class="showcase-hint">Click para expandir 🔍</span>
+              </div>
+
+              <div class="proyecto-media-grid">
+
+                <!-- 1. Logo Aura Fitness -->
+                <div class="media-thumb" data-type="image">
+                  <div class="media-wrapper">
+                    <img src="Main Logo.png" alt="Aura Fitness Brand Board" loading="lazy">
+                    <span class="media-tag">Logo / Identidad Visual</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">🔍</span>
+                      <span class="overlay-text">Ver en grande</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>Aura Fitness — Brand Board</h4>
+                    <p>Identidad gráfica con paleta armónica inspirada en bienestar y salud.</p>
+                  </div>
+                </div>
+
+                <!-- 2. Formato Story -->
+                <div class="media-thumb" data-type="image">
+                  <div class="media-wrapper">
+                    <img src="story.png" alt="Diseño formato Story para Aura Fitness" loading="lazy">
+                    <span class="media-tag">Formato Story</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">🔍</span>
+                      <span class="overlay-text">Ver en grande</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>Formato Story: Nutrición &amp; Fitness</h4>
+                    <p>Diseño vertical para engagement y consejos directos en Stories.</p>
+                  </div>
+                </div>
+
+                <!-- 3. Reel Audiovisual 1 -->
+                <div class="media-thumb" data-type="video">
+                  <div class="media-wrapper">
+                    <video autoplay loop muted playsinline poster="Main Logo.png">
+                      <source src="reel cover.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-tag tag-video">▶ Reel Conceptual</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">▶</span>
+                      <span class="overlay-text">Reproducir con audio</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>Prototipo Audiovisual 01</h4>
+                    <p>Cápsula de video generada con asistencia de IA para retención.</p>
+                  </div>
+                </div>
+
+                <!-- 4. Reel Audiovisual 2 -->
+                <div class="media-thumb" data-type="video">
+                  <div class="media-wrapper">
+                    <video autoplay loop muted playsinline poster="Main Logo.png">
+                      <source src="reel semana 4.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-tag tag-video">▶ Reel Conceptual</span>
+                    <div class="media-overlay">
+                      <span class="overlay-icon">▶</span>
+                      <span class="overlay-text">Reproducir con audio</span>
+                    </div>
+                  </div>
+                  <div class="media-meta">
+                    <h4>Prototipo Audiovisual 02</h4>
+                    <p>Motion edit enfocado en dinamismo y consistencia de marca.</p>
+                  </div>
+                </div>
+
+              </div><!-- /.proyecto-media-grid -->
+            </div><!-- /.proyecto-showcase -->
+
           </article>
 
-        </div>
+        </div><!-- /.proyectos-lista -->
+
         <!-- Mensaje que aparece si un filtro no tiene resultados (ver script.js) -->
         <p class="sin-resultados" hidden>No hay proyectos en esta categoría todavía.</p>
       </div>
     </section>
-
-    <!-- ============================================================
-   GALERÍA / SHOWCASE CREATIVO (NUEVA SECCIÓN)
-============================================================ -->
-<section class="galeria-seccion">
-  <div class="section-inner">
-    
-    <!-- Encabezado de la sección en tu estilo -->
-    <p class="section-eyebrow">SHOWCASE CREATIVO</p>
-    <h2 class="section-title">Exploraciones Visuales & Assets de Marca</h2>
-
-    <!-- Grilla de Tarjetas Visuales -->
-    <div class="galeria-grid">
-
-      <!-- Item 1: Branding / Identity -->
-      <div class="galeria-card">
-        <div class="galeria-media">
-          <img src="Main Logo.png" alt="Aura Fitness Brand Board" loading="lazy">
-          <span class="galeria-tag">Logo / Identidad Visual</span>
-        </div>
-        <div class="galeria-info">
-          <h4>Aura Fitness — Brand Board</h4>
-        </div>
-      </div>
-
-      <!-- Item 2: Social Media / Carrusel -->
-      <div class="galeria-card">
-        <div class="galeria-media">
-          <!-- Puedes usar una imagen, GIF o etiqueta <video> -->
-          <img src="story.png" alt="Reel de Nutrición con IA" loading="lazy">
-          <span class="galeria-tag tag-video">Formato Story</span>
-        </div>
-        <div class="galeria-info">
-          <h4>Ejemplo de Imagen Formato Story para Contenido</h4>
-        </div>
-      </div>
-
-      <!-- Item 3: Edición / Reel Audiovisual -->
-     <div class="galeria-card">
-  <div class="galeria-media">
-    
-    <!-- ETIQUETA DE VIDEO CONFIGURADA PARA AUTOPLAY -->
-    <video autoplay loop muted playsinline poster="ruta-a-una-imagen-de-portada.jpg">
-      <source src="reel cover.mp4" type="video/mp4">
-      Tu navegador no soporta la reproducción de video.
-    </video>
-
-    <span class="galeria-tag tag-video">Reel Conceptual</span>
-  </div>
-  <div class="galeria-info">
-    <h4>Prototipo Audiovisual (Reel)</h4>
-  </div>
-</div>
-<div class="galeria-card">
-  <div class="galeria-media">
-    
-    <!-- ETIQUETA DE VIDEO CONFIGURADA PARA AUTOPLAY -->
-    <video autoplay loop muted playsinline poster="ruta-a-una-imagen-de-portada.jpg">
-      <source src="reel semana 4.mp4" type="video/mp4">
-      Tu navegador no soporta la reproducción de video.
-    </video>
-
-    <span class="galeria-tag tag-video">Reel Conceptual</span>
-  </div>
-  <div class="galeria-info">
-    <h4>Prototipo Audiovisual (Reel)</h4>
-  </div>
-</div>
-</div>
-    <br>
-
-     <!-- Grilla de Tarjetas Visuales -->
-    <div class="galeria-grid">
-
-      <!-- Item 1: Branding / Identity -->
-      <div class="galeria-card">
-        <div class="galeria-media">
-          <img src="concepto visual simulado.jpeg" alt="Aura Fitness Brand Board" loading="lazy">
-          <span class="galeria-tag">Logo / Identidad Visual</span>
-        </div>
-        <div class="galeria-info">
-          <h4>Miami Sonrisas — Brand Board</h4>
-        </div>
-      </div>
-
-      <!-- Item 2: Edición / Reel Audiovisual -->
-      <div class="galeria-card">
-        <div class="galeria-media">
-          <!-- Puedes usar una imagen, GIF o etiqueta <video> -->
-          <img src="formato story.jpeg" alt="Reel de Nutrición con IA" loading="lazy">
-          <span class="galeria-tag tag-video">Formato Story</span>
-        </div>
-        <div class="galeria-info">
-          <h4>Ejemplo de Imagen Formato Story para Contenido</h4>
-        </div>
-      </div>
-
-      <!-- Item 3: Social Media / Carrusel -->
-      <div class="galeria-card">
-        <div class="galeria-media">
-          <img src="formato carrucel.jpeg" alt="Template de Carrusel" loading="lazy">
-          <span class="galeria-tag">Social Media</span>
-        </div>
-        <div class="galeria-info">
-          <h4>Carrusel Informativo</h4>
-        </div>
-      </div>
-
-    </div><!-- /.galeria-grid -->
-    <br>
-     <div class="galeria-grid">
-
-      <!-- Item 1: Branding / Identity -->
-      <div class="galeria-card">
-        <div class="galeria-media">
-          <img src="logo yisuss shoes remasterizado.jpeg" alt="Aura Fitness Brand Board" loading="lazy">
-          <span class="galeria-tag">Logo / Identidad Visual</span>
-        </div>
-        <div class="galeria-info">
-          <h4>YisussShoes — Brand Board</h4>
-        </div>
-      </div>
-
-      <!-- Item 2: Social Media / Carrusel -->
-      <div class="galeria-card">
-        <div class="galeria-media">
-          <!-- Puedes usar una imagen, GIF o etiqueta <video> -->
-          <img src="yisuss_shoes_main_showcase_01.jpeg" alt="Reel de Nutrición con IA" loading="lazy">
-          <span class="galeria-tag tag-video">Social Media</span>
-        </div>
-        <div class="galeria-info">
-          <h4>Carrusel Informativo</h4>
-        </div>
-      </div>
-
-      <!-- Item 3: Edición / Reel Audiovisual -->
-     <div class="galeria-card">
-  <div class="galeria-media">
-    
-    <!-- ETIQUETA DE VIDEO CONFIGURADA PARA AUTOPLAY -->
-    <video autoplay loop muted playsinline poster="ruta-a-una-imagen-de-portada.jpg">
-      <source src="yisuss_shoes_fitness_concept_04.mp4" type="video/mp4">
-      Tu navegador no soporta la reproducción de video.
-    </video>
-
-    <span class="galeria-tag tag-video">Reel Conceptual</span>
-  </div>
-  <div class="galeria-info">
-    <h4>Prototipo Audiovisual (Reel)</h4>
-  </div>
-</div>
-<div class="galeria-card">
-  <div class="galeria-media">
-    
-    <!-- ETIQUETA DE VIDEO CONFIGURADA PARA AUTOPLAY -->
-    <video autoplay loop muted playsinline poster="ruta-a-una-imagen-de-portada.jpg">
-      <source src="yisuss_shoes_fit_test_02.mp4" type="video/mp4">
-      Tu navegador no soporta la reproducción de video.
-    </video>
-
-    <span class="galeria-tag tag-video">Reel Conceptual</span>
-  </div>
-  <div class="galeria-info">
-    <h4>Prototipo Audiovisual (Reel)</h4>
-  </div>
-</div>
-</div>
-
-  </div><!-- /.section-inner -->
-</section>
-
-  </div>
-</section>
 
     <!-- ============================================
          SECCIÓN 3 — SOBRE MÍ
@@ -391,14 +622,18 @@
           <p class="section-eyebrow">Perfil</p>
           <h2 class="section-title">Sobre mí</h2>
           <p>
-            Estudiante de Ingeniería Industrial y creador de soluciones digitales. Tengo un perfil híbrido que me permite conectar dos mundos: la estructura lógica de los datos y la creatividad estratégica. En este espacio comparto mis habilidades aplicadas a través de proyectos personales y casos de estudio en diseño de marca, desarrollo web y estrategia en redes sociales, mostrando mi metodología para ayudar a los proyectos a comunicar mejor. Además, con la visión metódica de mi carrera, actualmente me encuentro ampliando mis herramientas en el área analítica mediante el aprendizaje de Excel Avanzado y SQL (PostgreSQL). Mi meta es combinar la lógica, el diseño y la organización para aportar soluciones prácticas y estructuradas a cada proyecto en el que participo.
+           Soy creador de soluciones digitales con enfoque en marketing, producción audiovisual y diseño. Combino creatividad y estrategia para ayudar a marcas y proyectos a comunicar mejor, destacar y convertir su presencia online en resultados.
           </p>
+          <p>En este espacio comparto mis habilidades a través de proyectos personales y casos de estudio en identidad de marca, desarrollo web y estrategia de contenidos en redes sociales. Trabajo con herramientas de inteligencia artificial generativa y edición de video para crear piezas dinámicas, y con campañas en Meta Ads para llevarlas a la audiencia correcta. Mi meta es aportar soluciones prácticas, visuales y bien estructuradas a cada proyecto en el que participo.</p>
           <!-- EDITA AQUÍ: agrega o quita habilidades según tu perfil -->
           <ul class="skills-list">
-            <li>Diseño de identidad de marca</li>
-            <li>Desarrollo web (HTML, CSS, JS)</li>
-            <li>Estrategia de contenido y RRSS</li>
-            <li>Fundamentos de Analítica: SQL / PostgreSQL y Excel (En desarrollo)</li>
+            <li>Marketing digital y campañas en Meta Ads</li>
+            <li>Estrategia de contenido y redes sociales</li>
+            <li>Redacción SEO</li>
+            <li>Edición de video e IA generativa (Veo 3 y OmniFlash)</li>
+            <li>Diseño gráfico e identidad de marca (Canva, Figma, Affinity)</li>
+            <li>Desarrollo web (HTML, CSS, JavaScript) con apoyo de Anti-Gravity</li>
+            <li>Automatización de Procesos (Make y Zpier)</li>
           </ul>
         </div>
         <!-- EDITA AQUÍ: reemplaza con tu foto, súbela a /assets/img/ -->
@@ -422,7 +657,6 @@
             <a href="https://github.com/yisussdc" target="_blank">GitHub</a>
           </div>
         </div>
-      </div>
     </section>
 
   </main>
@@ -435,12 +669,21 @@
   </footer>
   
   <div id="lightbox-modal" class="lightbox-modal" onclick="cerrarLightbox(event)">
-      <div class="lightbox-content">
-        <button class="lightbox-close" onclick="cerrarLightboxForzado()">&times;</button>
-        <div id="lightbox-body"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="cerrarLightboxForzado()">&times;</button>
+      
+      <!-- Controles de navegación para álbumes en pantalla completa -->
+      <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Anterior" onclick="navLightbox(-1)">‹</button>
+      <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Siguiente" onclick="navLightbox(1)">›</button>
+
+      <div id="lightbox-body"></div>
+      
+      <div class="lightbox-footer">
+        <span id="lightbox-counter" class="lightbox-counter"></span>
         <div id="lightbox-caption" class="lightbox-caption"></div>
       </div>
     </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
